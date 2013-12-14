@@ -1,0 +1,6 @@
+import os
+import sys
+sys.path = ['/home/bossip/.virtualenvs/bauHaus/sysadmin/'] + sys.path 
+os.environ['DJANGO_SETTINGS_MODULE'] = 'sysadmin.settings'
+import django.core.handlers.wsgi
+application = django.core.handlers.wsgi.WSGIHandler()
