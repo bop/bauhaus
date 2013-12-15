@@ -5333,7 +5333,7 @@ th.hide-for-touch {
 
 .jumbotron h1{
 	text-align: center;
-	font-size: 100px;
+	font-size: 80px;
 	color: silver;
 	font-weight: bold;
 }

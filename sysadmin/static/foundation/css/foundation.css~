@@ -5329,33 +5329,3 @@ th.hide-for-touch {
 
 .touch th.show-for-touch {
   display: table-cell !important; }
-
-
-.jumbotron h1{
-	text-align: center;
-	font-size: 100px;
-	color: silver;
-	font-weight: bold;
-}
-
-
-.jumbotron li{
-	display: inline-block;
-    	list-style-position: inside;
-	padding: 15px ;
-}
-
-
-.jumbotron {
-    text-align: center;
-    background-image: url(/static/img/pattern.png);
-    background-color: black;
-	color: silver;	
-
-}
-
-
-.hero-unit i{
-    color: #FF2400;
-}
-
