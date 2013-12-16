@@ -6,6 +6,7 @@
 <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
     {% block meta %}{% endblock meta %}
     {% block base_title %}
     <title>{% block title %}Foundation 5{% endblock title %}</title>
@@ -53,5 +54,6 @@
         $(document).foundation();
     </script>
     {% endblock foundation_js_init %}
+    <p class="footer panel brown text-center">Site réalisé par <a href="http://xpertise.ch">Xpertise</a></p>
 </body>
 </html>
