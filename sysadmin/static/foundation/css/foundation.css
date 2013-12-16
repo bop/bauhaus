@@ -1,4 +1,12 @@
 @import url("//fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,700italic,400,300,700");
+
+@font-face {
+  font-family: 'Varela Round';
+  font-style: normal;
+  font-weight: 400;
+  src: local('Varela Round'), local('VarelaRound-Regular'), url(http://themes.googleusercontent.com/static/fonts/varelaround/v3/APH4jr0uSos5wiut5cpjrnhCUOGz7vYGh680lGh-uXM.woff) format('woff');
+}
+
 meta.foundation-mq-small {
   font-family: "/only screen and (max-width: 40em)/";
   width: 0em; }
@@ -2182,11 +2190,32 @@ button, .button {
       line-height: 1.4; }
   .panel.callout {
     border-style: solid;
-    border-width: 1px;
-    border-color: #baeeff;
+    border-width: 2px;
+    border-color: #A68064;
     margin-bottom: 1.25rem;
     padding: 1.25rem;
-    background: #edfbff; }
+    background-color: rgba(166,128,100,.25)
+
+        -moz-border-radius-topright: 1000px;
+    -moz-border-radius-bottomright: 1000px;
+    -webkit-border-top-right-radius: 1000px;
+    -webkit-border-bottom-right-radius: 1000px;
+}
+
+  .panel.callout-left {
+    border-style: solid;
+    border-width: 2px;
+    border-color: #A68064;
+    margin-bottom: 1.25rem;
+    padding: 1.25rem;
+    background-color: rgba(166,128,100,.25)
+
+        -moz-border-radius-topleft: 1000px;
+    -moz-border-radius-bottomleft: 1000px;
+    -webkit-border-top-left-radius: 1000px;
+    -webkit-border-bottom-left-radius: 1000px;
+}
+
     .panel.callout > :first-child {
       margin-top: 0; }
     .panel.callout > :last-child {
@@ -5338,7 +5367,6 @@ th.hide-for-touch {
 	text-align: center;
 	font-size: 100px;
 	color: #E3E3E3;
-	font-weight: bold;
 }
 
 
@@ -5348,9 +5376,12 @@ th.hide-for-touch {
 	padding: 15px ;
 	letter-spacing: -1px;
 	line-height: 1;
-
 }
 
+.hero-unit {
+    margin: 15px;
+    text-align:center;
+}
 
 .hero-unit i{
     color: #FF2400;
@@ -5362,20 +5393,21 @@ th.hide-for-touch {
 /* Base class
 ------------------------- */
 .jumbotron {
+  font-family:  'Varela Round', sans-serif;
   position: relative;
   padding: 40px 0;
-  color: #E3E3E3;
+  color: #fff;
   text-align: center;
   text-shadow: 0 1px 3px rgba(0,0,0,.4), 0 0 30px rgba(0,0,0,.075);
   background-image: url(/static/img/pattern.png);
   background: #031221; /* Old browsers */
-  background: -moz-linear-gradient(45deg,  #031221 0%, #EE1289 100%); /* FF3.6+ */
-  background: -webkit-gradient(linear, left bottom, right top, color-stop(0%,#031221), color-stop(100%,#EE1289)); /* Chrome,Safari4+ */
-  background: -webkit-linear-gradient(45deg,  #031221 0%,#EE1289 100%); /* Chrome10+,Safari5.1+ */
-  background: -o-linear-gradient(45deg,  #031221 0%,#EE1289 100%); /* Opera 11.10+ */
-  background: -ms-linear-gradient(45deg,  #031221 0%,#EE1289 100%); /* IE10+ */
-  background: linear-gradient(45deg,  #031221 0%,#EE1289 100%); /* W3C */
-  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#031221', endColorstr='#EE1289',GradientType=1 ); /* IE6-9 fallback on horizontal gradient */
+  background: -moz-linear-gradient(45deg,  #171717 0%, #A68064 100%); /* FF3.6+ */
+  background: -webkit-gradient(linear, left bottom, right top, color-stop(0%,#171717), color-stop(100%,#A68064)); /* Chrome,Safari4+ */
+  background: -webkit-linear-gradient(45deg,  #171717 0%,#A68064 100%); /* Chrome10+,Safari5.1+ */
+  background: -o-linear-gradient(45deg,  #171717 0%,#A68064 100%); /* Opera 11.10+ */
+  background: -ms-linear-gradient(45deg,  #171717 0%,#A68064 100%); /* IE10+ */
+  background: linear-gradient(45deg,  #171717 0%,#A68064 100%); /* W3C */
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#171717', endColorstr='#A68064',GradientType=1 ); /* IE6-9 fallback on horizontal gradient */
   -webkit-box-shadow: inset 0 3px 7px rgba(0,0,0,.2), inset 0 -3px 7px rgba(0,0,0,.2);
      -moz-box-shadow: inset 0 3px 7px rgba(0,0,0,.2), inset 0 -3px 7px rgba(0,0,0,.2);
           box-shadow: inset 0 3px 7px rgba(0,0,0,.2), inset 0 -3px 7px rgba(0,0,0,.2);
@@ -5383,11 +5415,11 @@ th.hide-for-touch {
 
 /* Link styles (used on .masthead-links as well) */
 .jumbotron a {
-  color: #fff;
+    color: #E3E3E3;
   color: rgba(255,255,255,.5);
-  -webkit-transition: all .3s ease-in-out;
-     -moz-transition: all .3s ease-in-out;
-          transition: all .3s ease-in-out;
+  -webkit-transition: all .4s ease-in-out;
+     -moz-transition: all .4s ease-in-out;
+          transition: all .4s ease-in-out;
 }
 .jumbotron a:hover {
   color: #fff;
@@ -5413,7 +5445,7 @@ th.hide-for-touch {
   bottom: 0;
   left: 0;
   background: url(../img/pattern.png) repeat center center;
-  opacity: 1;
+  opacity: .8;
 }
 @media
 only screen and (-webkit-min-device-pixel-ratio: 2),
@@ -5431,19 +5463,18 @@ only screen and (     -o-min-device-pixel-ratio: 2/1) {
 .masthead {
   padding: 70px 0 40px;
   margin-bottom: 0;
-  color: #E3E3E3;
-  font-family: courier;
-  letter-spacing: -3px;
+  color: #fff;
 }
 .masthead h1 {
   font-size: 120px;
   line-height: 1;
-  letter-spacing: -1px;
+  letter-spacing: -2px;
 }
 .masthead p {
   font-size: 40px;
   font-weight: 200;
   line-height: 1.25;
+  color: #E3E3E3;
 }
 
 /* Textual links in masthead */
@@ -5457,5 +5488,31 @@ only screen and (     -o-min-device-pixel-ratio: 2/1) {
   color: rgba(255,255,255,.25);
 }
 
+.brown {
+    background-color: rgba(166,128,100,.35)
+}
+
+.orange {
+    color: #FF2400
+}
+
+.footer {
+  font-family:  'Varela Round', sans-serif;   
+  width: 80%;
+  margin-left: 10%;
+
+
+        -moz-border-radius-topright: 10px;
+    -moz-border-radius-bottomright: 10px;
+    -webkit-border-top-right-radius: 10px;
+    -webkit-border-bottom-right-radius: 10px;
+
+
+        -moz-border-radius-topleft: 10px;
+    -moz-border-radius-bottomleft: 10px;
+    -webkit-border-top-left-radius: 10px;
+    -webkit-border-bottom-left-radius: 10px;
+}
+}
 
 
