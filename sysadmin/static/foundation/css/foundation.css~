@@ -1508,6 +1508,7 @@ meta.foundation-mq-topbar {
         padding: 0 15px; }
   .top-bar .toggle-topbar {
       background: url(../img/pattern.png) repeat center center;
+      opacity: .5;
       position: absolute;
       right: 0;
       top: 0; }
@@ -5384,6 +5385,19 @@ th.hide-for-touch {
 }
 
 
+/* Link styles (used on .masthead-links as well) */
+.jumbotron a {
+  color: #fff;
+  color: rgba(255,255,255,.5);
+  -webkit-transition: all .2s ease-in-out;
+     -moz-transition: all .2s ease-in-out;
+          transition: all .2s ease-in-out;
+}
+.jumbotron a:hover {
+  color: #fff;
+  text-shadow: 0 0 10px rgba(255,255,255,.25);
+}
+
 
 
 
@@ -5393,6 +5407,7 @@ th.hide-for-touch {
   position: relative;
   z-index: 2;
 }
+
 .jumbotron:after {
   content: '';
   display: block;
@@ -5402,7 +5417,7 @@ th.hide-for-touch {
   bottom: 0;
   left: 0;
   background: url(../img/pattern.png) repeat center center;
-  opacity: .4;
+  opacity: .9;
 }
 @media
 only screen and (-webkit-min-device-pixel-ratio: 2),
@@ -5418,7 +5433,7 @@ only screen and (     -o-min-device-pixel-ratio: 2/1) {
 /* Masthead (docs home)
 ------------------------- */
 .masthead {
-  padding: 70px 0 80px;
+  padding: 70px 0 40px;
   margin-bottom: 0;
   color: #fff;
 }
@@ -5444,26 +5459,5 @@ only screen and (     -o-min-device-pixel-ratio: 2/1) {
   color: rgba(255,255,255,.25);
 }
 
-/* Social proof buttons from GitHub & Twitter */
-.bs-docs-social {
-  padding: 15px 0;
-  text-align: center;
-  background-color: #f5f5f5;
-  border-top: 1px solid #fff;
-  border-bottom: 1px solid #ddd;
-}
 
-/* Quick links on Home */
-.bs-docs-social-buttons {
-  margin-left: 0;
-  margin-bottom: 0;
-  padding-left: 0;
-  list-style: none;
-}
-.bs-docs-social-buttons li {
-  display: inline-block;
-  padding: 5px 8px;
-  line-height: 1;
-  *display: inline;
-  *zoom: 1;
-}
+

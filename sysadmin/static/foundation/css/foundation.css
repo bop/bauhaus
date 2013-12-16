@@ -1508,6 +1508,7 @@ meta.foundation-mq-topbar {
         padding: 0 15px; }
   .top-bar .toggle-topbar {
       background: url(../img/pattern.png) repeat center center;
+      opacity: .5;
       position: absolute;
       right: 0;
       top: 0; }
@@ -5336,7 +5337,7 @@ th.hide-for-touch {
 .jumbotron h1{
 	text-align: center;
 	font-size: 100px;
-	color: silver;
+	color: #E3E3E3;
 	font-weight: bold;
 }
 
@@ -5345,6 +5346,9 @@ th.hide-for-touch {
 	display: inline-block;
     	list-style-position: inside;
 	padding: 15px ;
+	letter-spacing: -1px;
+	line-height: 1;
+
 }
 
 
@@ -5360,7 +5364,7 @@ th.hide-for-touch {
 .jumbotron {
   position: relative;
   padding: 40px 0;
-  color: #fff;
+  color: #E3E3E3;
   text-align: center;
   text-shadow: 0 1px 3px rgba(0,0,0,.4), 0 0 30px rgba(0,0,0,.075);
   background-image: url(/static/img/pattern.png);
@@ -5376,21 +5380,14 @@ th.hide-for-touch {
      -moz-box-shadow: inset 0 3px 7px rgba(0,0,0,.2), inset 0 -3px 7px rgba(0,0,0,.2);
           box-shadow: inset 0 3px 7px rgba(0,0,0,.2), inset 0 -3px 7px rgba(0,0,0,.2);
 }
-.jumbotron h1 {
-  font-size: 80px;
-  font-weight: bold;
-  letter-spacing: -1px;
-  line-height: 1;
-}
-
 
 /* Link styles (used on .masthead-links as well) */
 .jumbotron a {
   color: #fff;
   color: rgba(255,255,255,.5);
-  -webkit-transition: all .2s ease-in-out;
-     -moz-transition: all .2s ease-in-out;
-          transition: all .2s ease-in-out;
+  -webkit-transition: all .3s ease-in-out;
+     -moz-transition: all .3s ease-in-out;
+          transition: all .3s ease-in-out;
 }
 .jumbotron a:hover {
   color: #fff;
@@ -5416,7 +5413,7 @@ th.hide-for-touch {
   bottom: 0;
   left: 0;
   background: url(../img/pattern.png) repeat center center;
-  opacity: .7;
+  opacity: 1;
 }
 @media
 only screen and (-webkit-min-device-pixel-ratio: 2),
@@ -5434,12 +5431,14 @@ only screen and (     -o-min-device-pixel-ratio: 2/1) {
 .masthead {
   padding: 70px 0 40px;
   margin-bottom: 0;
-  color: #fff;
+  color: #E3E3E3;
+  font-family: courier;
+  letter-spacing: -3px;
 }
 .masthead h1 {
   font-size: 120px;
   line-height: 1;
-  letter-spacing: -2px;
+  letter-spacing: -1px;
 }
 .masthead p {
   font-size: 40px;
