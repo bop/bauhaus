@@ -51,7 +51,8 @@ body {
   cursor: default; }
 
 a:hover {
-  cursor: pointer; }
+  cursor: pointer; 
+}
 
 img,
 object,
@@ -1507,13 +1508,29 @@ meta.foundation-mq-topbar {
     .top-bar .name h1 {
       line-height: 45px;
       font-size: 1.0625rem;
-      margin: 0; }
-      .top-bar .name h1 a {
+      margin: 0;
+      margin-left: 12px; 
+      font-family:  'Varela Round', sans-serif;
+    }
+    .top-bar .name h1 a {
         font-weight: normal;
-        color: white;
+        color: #E3E3E3;
         width: 50%;
         display: block;
-        padding: 0 15px; }
+        padding: 0 15px; 
+	
+	-webkit-transition: all .4s ease-in-out;
+	-moz-transition: all .4s ease-in-out;
+        transition: all .4s ease-in-out;
+    }
+
+    .top-bar .name h1 a:hover{
+        font-weight: normal;
+        color: #006687;
+        display: block;
+        padding: 0 15px; 
+    }
+
   .top-bar .toggle-topbar {
       background: url(../img/pattern.png) repeat center center;
       opacity: .5;
@@ -1584,12 +1601,13 @@ meta.foundation-mq-topbar {
   .top-bar-section ul li > a {
     display: block;
     width: 100%;
-    color: white;
+    color: silver;
     padding: 12px 0 12px 0;
-    padding-left: 15px;
+    padding-left: 5px;
     font-family: "Helvetica Neue", "Helvetica", Helvetica, Arial, sans-serif;
-    font-size: 0.8125rem;
+    font-size: 1.125rem;
     font-weight: normal;
+    margin-left: 20px; 
     background: #333333; }
     .top-bar-section ul li > a.button {
       background: #008cba;
@@ -1614,10 +1632,10 @@ meta.foundation-mq-topbar {
     background: #272727;
     color: white; }
   .top-bar-section ul li.active > a {
-    background: #008cba;
+    background: #2E8B57;
     color: white; }
     .top-bar-section ul li.active > a:hover {
-      background: #0079a1; }
+      background: #272727; }
   .top-bar-section .has-form {
     padding: 15px; }
   .top-bar-section .has-dropdown {
@@ -1647,12 +1665,20 @@ meta.foundation-mq-topbar {
     z-index: 99; }
     .top-bar-section .dropdown li {
       width: 100%;
-      height: auto; }
+      height: auto; 
+    }
       .top-bar-section .dropdown li a {
         font-weight: normal;
-        padding: 8px 15px; }
+        padding: 8px 15px; 
+      }
+      .top-bar-section .dropdown li a:hover {
+	color: #E3E3E3;
+      }
+
         .top-bar-section .dropdown li a.parent-link {
-          font-weight: normal; }
+          font-weight: normal; 
+	color: #E3E3E3;
+	}
       .top-bar-section .dropdown li.title h5 {
         margin-bottom: 0; }
         .top-bar-section .dropdown li.title h5 a {
@@ -5384,7 +5410,7 @@ th.hide-for-touch {
 }
 
 .hero-unit i{
-    color: #FF2400;
+    color: #2E8B57
 }
 
 /* Jumbotrons
@@ -5415,18 +5441,14 @@ th.hide-for-touch {
 
 /* Link styles (used on .masthead-links as well) */
 .jumbotron a {
-    color: #E3E3E3;
-  color: rgba(255,255,255,.5);
   -webkit-transition: all .4s ease-in-out;
      -moz-transition: all .4s ease-in-out;
           transition: all .4s ease-in-out;
 }
 .jumbotron a:hover {
-  color: #fff;
+  color: rgba(255,255,255,0.5);
   text-shadow: 0 0 10px rgba(255,255,255,.25);
 }
-
-
 
 
 /* Pattern overlay
@@ -5493,7 +5515,22 @@ only screen and (     -o-min-device-pixel-ratio: 2/1) {
 }
 
 .orange {
-    color: #FF2400
+    color: #2E8B57;    
+}
+
+.header {
+  font-family:  'Varela Round', sans-serif;   
+
+        -moz-border-radius-topright: 10px;
+    -moz-border-radius-bottomright: 10px;
+    -webkit-border-top-right-radius: 10px;
+    -webkit-border-bottom-right-radius: 10px;
+
+
+        -moz-border-radius-topleft: 10px;
+    -moz-border-radius-bottomleft: 10px;
+    -webkit-border-top-left-radius: 10px;
+    -webkit-border-bottom-left-radius: 10px;
 }
 
 .footer {
@@ -5512,11 +5549,4 @@ only screen and (     -o-min-device-pixel-ratio: 2/1) {
     -moz-border-radius-bottomleft: 10px;
     -webkit-border-top-left-radius: 10px;
     -webkit-border-bottom-left-radius: 10px;
-}
-
-
-.boxlink a:hover{
-    color: red;
-    text-shadow: 0 0 10px rgba(255,255,255,.25);
-    font-size: 24px
 }
