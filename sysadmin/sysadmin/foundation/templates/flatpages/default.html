@@ -1,0 +1,23 @@
+{% extends "foundation/base.html" %}
+
+{% block title %} {{ flatpage.title }} {% endblock title %}
+{# Main content goes here #}
+
+{% block content %}
+
+  <div class="jumbotron masthead">
+    <div class="container">
+      <h1>{{ flatpage.title }}</h1>
+    </div>
+  </div>
+  <br /><br />
+  <div class="row">
+    <div class="large-12 columns">
+      <div class="panel radius">
+	{{ flatpage.content }}
+      </div>
+    </div>
+  </div>
+
+
+{% endblock %}

@@ -1635,7 +1635,9 @@ meta.foundation-mq-topbar {
     background: #2E8B57;
     color: white; }
     .top-bar-section ul li.active > a:hover {
-      background: #272727; }
+      background: #2E8B57;
+      color: silver;
+    }
   .top-bar-section .has-form {
     padding: 15px; }
   .top-bar-section .has-dropdown {

@@ -9,9 +9,9 @@ urlpatterns = patterns('',
     # url(r'^$', 'sysadmin.views.home', name='home'),
     # url(r'^sysadmin/', include('sysadmin.foo.urls')),
                        url(r'^$', include('sysadmin.foundation.urls')),
-    # Uncomment the admin/doc line below to enable admin documentation:
-    # url(r'^admin/doc/', include('django.contrib.admindocs.urls')),
+                       url(r'^admin/', include(admin.site.urls)),
+                       )
 
-    # Uncomment the next line to enable the admin:
-                           url(r'^admin/', include(admin.site.urls)),
-)
+urlpatterns += patterns('django.contrib.flatpages.views',
+                        (r'^(?P<url>.*/)$', 'flatpage'),
+                        )

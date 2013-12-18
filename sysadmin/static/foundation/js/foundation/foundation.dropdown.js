@@ -8,7 +8,7 @@
 
     settings : {
       active_class: 'open',
-      is_hover: true,
+      is_hover: false,
       opened: function(){},
       closed: function(){}
     },

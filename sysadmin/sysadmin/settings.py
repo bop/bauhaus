@@ -103,7 +103,7 @@ MIDDLEWARE_CLASSES = (
     'django.middleware.csrf.CsrfViewMiddleware',
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
-    # Uncomment the next line for simple clickjacking protection:
+    'django.contrib.flatpages.middleware.FlatpageFallbackMiddleware',
     # 'django.middleware.clickjacking.XFrameOptionsMiddleware',
 )
 
@@ -128,8 +128,7 @@ INSTALLED_APPS = (
     'django.contrib.staticfiles',
     'sysadmin.foundation',
     'django.contrib.admin',
-    # Uncomment the next line to enable admin documentation:
-    # 'django.contrib.admindocs',
+    'django.contrib.flatpages',
 )
 
 # A sample logging configuration. The only tangible logging
@@ -162,3 +161,4 @@ LOGGING = {
 }
 
 
+SITE_NAME = 'sysadmin'
