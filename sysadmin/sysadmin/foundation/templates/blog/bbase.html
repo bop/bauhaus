@@ -1,8 +1,52 @@
 {% extends "foundation/base.html" %}
+
 {% block meta %}
   <meta name="keywords" content="blog, django framework, html5, css3, linux" />
   <meta name="description" content="Un blog technique sur le développement web et les technologies libres." />
 {% endblock meta %}
+
+{% block menu %}
+  <nav class="top-bar" data-topbar>
+    {% if user.is_authenticated %}
+      <ul class="title-area">
+	<li class="name">
+	  <h1><a href="/admin"><b>Xpertise</b></a></h1>
+	</li>
+      </ul>
+  {% endif %}
+  <section class="top-bar-section radius">
+    <!-- Right Nav Section -->
+    <ul class="left">
+      <li><a href="/">Accueil</a></li>
+      <li><a href="/réalisations/">Réalisations</a></li>
+      <li><a href="/contact">Contact</a></li>
+      <li class="has-dropdown active">
+	<a href="/blog/">Blog</a>
+	<ul class="dropdown">
+	  {% for post in object_list %}<li>
+	    <a href="/blog/{{ post.id }}">{{ post }}</a></li>
+	  {% endfor %}
+	</ul>
+      </li>
+    </ul>
+
+    <!-- Left Nav Section -->
+    <ul class="right">
+      <li><a href="#">Staff</a></li>
+      <li class="has-form">
+	<div class="row collapse">
+	  <div class="large-8 small-9 columns">
+	    <input type="text" placeholder="Trouver un truc">
+	    </div>
+	    <div class="small-3 columns">
+	      <a href="#" class="button expand round">Cherche</a>
+	    </div>
+	  </div>
+	</li>
+      </ul>
+    </section>
+  </nav>
+{% endblock menu%}
 
 {% block base_body %}
   <div class="jumbotron masthead">
@@ -14,9 +58,7 @@
   {% block slogan %}
     <h2 class="text-center">Nos meilleurs ingrédients </h2>
     <h3 class="text-center">pour développer librement</h3>
-  </div>
+</div>
 {% endblock slogan %}
 <br />
-{% endblock base_body %}      
-
-{% block content%}{% endblock %}
+{% endblock base_body %}

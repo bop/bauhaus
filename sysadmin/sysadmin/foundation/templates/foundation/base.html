@@ -12,7 +12,7 @@
 
     {% block meta %}{% endblock meta %}
     {% block base_title %}
-      <title>{% block title %}Foundation 5{% endblock title %}</title>
+      <title>{% block title %}Xpertise{% endblock title %}</title>
     {% endblock base_title %}
 
     {# Base Foundation CSS #}
@@ -35,20 +35,21 @@
     {% block head_js %}{% endblock head_js %}
   </head>
   <body {% block body_attr %}{% endblock body_attr %}>
-    <nav class="top-bar" data-topbar>
-      {% if user.is_authenticated %}
-	<ul class="title-area">
-	  <li class="name">
-	    <h1><a href="/admin"><b>Xpertise</b></a></h1>
-	  </li>
-	</ul>
-      {% endif %}
-      <section class="top-bar-section radius">
-	<!-- Right Nav Section -->
-	<ul class="left">
-	  {% if not flatpage.title %}
-            <li class="active"><a href="/">Accueil</a></li>
-	  {% else %}<li><a href="/">Accueil</a></li>
+    {% block menu %}
+      <nav class="top-bar" data-topbar>
+	{% if user.is_authenticated %}
+	  <ul class="title-area">
+	    <li class="name">
+	      <h1><a href="/admin"><b>Xpertise</b></a></h1>
+	    </li>
+	  </ul>
+	{% endif %}
+	<section class="top-bar-section radius">
+	  <!-- Right Nav Section -->
+	  <ul class="left">
+	    {% if not flatpage.title %}
+              <li class="active"><a href="/">Accueil</a></li>
+	    {% else %}<li><a href="/">Accueil</a></li>
 	  {% endif %}
 	  {% if flatpage.title = 'Réalisations' %}
             <li class="active"><a href="/réalisations/">Réalisations</a></li>
@@ -60,38 +61,34 @@
 	  {% else %}
 	    <li><a href="/contact">Contact</a></li>
 	  {% endif %}
-	  <li class="has-dropdown">
+	  <li>
 	    <a href="/blog/">Blog</a>
-	    <ul class="dropdown">
-	      <li><a href="#">Développement</a></li>
-	      <li><a href="#">Webdesign</a></li>
-	    </ul>
 	  </li>
-	</ul>
-
-	<!-- Left Nav Section -->
-	<ul class="right">
-	  <li><a href="#">Staff</a></li>
-	  <li class="has-form">
-	    <div class="row collapse">
-	      <div class="large-8 small-9 columns">
-		<input type="text" placeholder="Trouver un truc">
-		</div>
-		<div class="small-3 columns">
-		  <a href="#" class="button expand round">Cherche</a>
-		</div>
-	      </div>
-	    </li>
 	  </ul>
-	</section>
-      </nav>
+
+	  <!-- Left Nav Section -->
+	  <ul class="right">
+	    <li><a href="#">Staff</a></li>
+	    <li class="has-form">
+	      <div class="row collapse">
+		<div class="large-8 small-9 columns">
+		  <input type="text" placeholder="Trouver un truc">
+		  </div>
+		  <div class="small-3 columns">
+		    <a href="#" class="button expand round">Cherche</a>
+		  </div>
+		</div>
+	      </li>
+	    </ul>
+	  </section>
+	</nav>
+      {% endblock menu%}
 
       {# Main content goes here #}
       {% block base_body %}{% endblock base_body %}
       {% block content %}{% endblock content %}
       
-      <ul class="breadcrumbs footer">
-
+      <ul class="breadcrumbs footer bold">
 	<li><a href="/">Home</a></li>
 	{% for page in flatpages %}
           <li><a href="{{ page.url }}">{{ page.title }}</a></li>
