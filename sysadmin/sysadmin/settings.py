@@ -129,6 +129,8 @@ INSTALLED_APPS = (
     'sysadmin.foundation',
     'django.contrib.admin',
     'django.contrib.flatpages',
+    'taggit',
+    'sysadmin.blog',
 )
 
 # A sample logging configuration. The only tangible logging

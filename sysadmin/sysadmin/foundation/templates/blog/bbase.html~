@@ -1,0 +1,67 @@
+{% extends "xpz.html" %}
+{% block meta %}
+<meta name="keywords" content="blog, django framework, html5, css3, linux" />
+<meta name="description" content="Un blog technique sur le développement web et les technologies libres." />
+{% endblock meta %}
+
+{% block navbar %}
+<!-- Navbar                                                                                     
+     ================================================== -->
+<div class="navbar navbar-inverse navbar-fixed-top">
+  <div class="navbar-inner">
+    <div class="container">
+      <button type="button" class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+          {% if user.is_authenticated %}
+          <a class="brand" href="http://www.xpertise.ch/admin/" target="_blank"> Xpertise </a>
+          {% endif %}
+      <div class="nav-collapse collapse">
+        <ul class="nav">
+          <li class="">
+	    <a href="http://www.xpertise.ch/accueil"><i class="icon-home icon-white"></i> Home </a>
+          </li>
+          <li class="">
+            <a href="http://www.xpertise.ch/exemples"><i class="icon-wrench icon-white"></i> &nbsp;Réalisation de sites</a>
+          </li>
+	  <li class="active">
+            <a href="http://www.xpertise.ch/blog/"><i class="icon-pencil icon-white"></i> Blog </a>
+          </li>
+          <li class="">
+            <a href="http://www.xpertise.ch/contact"><i class="icon-envelope icon-white"></i> Contact </a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</div>
+
+{% endblock navbar %}
+
+{% block xpage %}
+
+<div class="jumbotron masthead">
+  <div class="container">
+    <h1>Blog</h1>
+  </div>
+</div>
+{% block slogan %}
+<div class="container">
+  <h2 style="text-align:center;">Nos meilleurs ingrédients </h2>
+  <h3 style="text-align:center;">pour développer librement</h3>
+</div>
+{% endblock slogan %}
+
+<div class="container">
+  <div class="marketing">
+    {% block content %}
+
+    {% endblock content %}      
+
+  </div>
+</div>
+
+{% endblock xpage %}
+
