@@ -51,6 +51,9 @@
               <li class="active"><a href="/">Accueil</a></li>
 	    {% else %}<li><a href="/">Accueil</a></li>
 	  {% endif %}
+	  <li>
+	    <a href="/blog/">Blog</a>
+	  </li>
 	  {% if flatpage.title = 'Réalisations' %}
             <li class="active"><a href="/réalisations/">Réalisations</a></li>
 	  {% else %}
@@ -58,12 +61,9 @@
 	  {% endif %}
 	  {% if flatpage.title = 'Contact' %}
             <li class="active"><a href="/contact">Contact</a></li>
-	  {% else %}
+	  {% else %}	    
 	    <li><a href="/contact">Contact</a></li>
 	  {% endif %}
-	  <li>
-	    <a href="/blog/">Blog</a>
-	  </li>
 	  </ul>
 
 	  <!-- Left Nav Section -->
@@ -92,12 +92,12 @@
       {% block footer %}
       <ul class="breadcrumbs footer bold">
 	<li><a href="/">Home</a></li>
+	<li><a href="/blog">Blog</a></li>
+	{% block blog %}{% endblock blog %}
+	<li class="right">Réalisé avec Xpertise</li>
 	{% for page in flatpages %}
           <li><a href="{{ page.url }}">{{ page.title }}</a></li>
 	{% endfor %}
-	<li><a href="/blog">Blog</a></li>
-
-	<li class="right">Réalisé avec Xpertise</li>
       </ul>
       {% endblock footer %}
       

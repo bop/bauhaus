@@ -18,8 +18,6 @@
     <!-- Right Nav Section -->
     <ul class="left">
       <li><a href="/">Accueil</a></li>
-      <li><a href="/réalisations/">Réalisations</a></li>
-      <li><a href="/contact">Contact</a></li>
       {% block dropdown %}
 	<li class="has-dropdown active">
 	  <a href="/blog/">Blog</a>
@@ -27,9 +25,13 @@
 	    {% for post in object_list %}<li>
 	      <a href="/blog/{{ post.id }}">{{ post }}</a></li>
 	    {% endfor %}
+	    <li><a href="/blog/archives">archives</a>
+	    </li>
 	  </ul>
 	{% endblock dropdown %}
+      <li><a href="/réalisations/">Réalisations</a></li>
 	</li>
+	<li><a href="/contact">Contact</a></li>
     </ul>
 
     <!-- Left Nav Section -->
@@ -67,15 +69,15 @@
 
   {% block footer %}
     <ul class="breadcrumbs footer bold">
-      <li><a href="/">Home</a></li>
-      {% for page in flatpages %}
-        <li><a href="{{ page.url }}">{{ page.title }}</a></li>
-      {% endfor %}
+      <li><a href="/">Accueil</a></li>
       <li class="has-dropdown active">
 	<a href="/blog/">Blog</a>
       </li>
-
+      {% block blog %}{% endblock blog %}
       <li class="right">Réalisé avec Xpertise</li>
+      {% for page in flatpages %}
+        <li><a href="{{ page.url }}">{{ page.title }}</a></li>
+      {% endfor %}
     </ul>
 
   {% endblock footer %}

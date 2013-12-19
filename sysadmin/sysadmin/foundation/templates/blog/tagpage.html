@@ -1,8 +1,14 @@
 {% extends "blog/bbase.html" %}
 
-{% block slogan %}
+{% block slogan %}{% endblock slogan %}
 
-{% endblock slogan %}
+
+{% block dropdown %}  
+    <li class="active">
+      <a href="/blog">Blog</a>
+    </li>
+{% endblock dropdown %}
+
 
 {% block content %}
 
@@ -25,3 +31,10 @@
   <br />
   <br />
 {% endblock %}
+
+
+{% block blog %}
+	<li class="current">
+	<a href="/">Catégories</a>
+      </li>
+{% endblock blog %}

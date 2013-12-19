@@ -2,8 +2,10 @@
 
 
 {% block slogan %}
-<div class="container">
-  <div class="marketing">      
+<div class="row 12">
+
+  <div class="container">
+    <div class="marketing">      
     <h2>Archives</h2>
   </div>
 </div>
@@ -11,7 +13,6 @@
 
 {% block content %}
 
-<div style="margin-bottom:20%;">
   
   {% for post in object_list %}
 
@@ -23,3 +24,9 @@
 </div>
 
 {% endblock content %}
+
+{% block blog %}
+	<li class="current">
+	<a href="/">Archives</a>
+      </li>
+{% endblock blog %}

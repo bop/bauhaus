@@ -43,15 +43,15 @@
 {% block footer %}
         <ul class="breadcrumbs footer bold">
 	<li><a href="/">Home</a></li>
-	{% for page in flatpages %}
-          <li><a href="{{ page.url }}">{{ page.title }}</a></li>
-	{% endfor %}
 	<li>
 	  <a href="/blog/">Blog</a>
 	</li>
 	<li class="current">
 	<a href="/">{{ post }}</a></li>
-      </li>
+      </li>	{% for page in flatpages %}
+          <li><a href="{{ page.url }}">{{ page.title }}</a></li>
+	{% endfor %}
+
 
 	<li class="right">Réalisé avec Xpertise</li>
       </ul>
