@@ -28,13 +28,12 @@
 	  {% endfor %}
 	  </div>
 	  <div class="post_meta"><br />
-	    publié le: {{ post.created|date:"l d F Y" }}
+	  publié le: {{ post.created|date:"l d F Y" }}
 	  </div>
 	</div>
 	<br />
-	    {% endfor %}
-	    <br />
+      <br />
       </div>
     </div>
-  </div>
+  {% endfor %}
 {% endblock %}

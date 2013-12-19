@@ -1,6 +1,14 @@
 {% extends "blog/bbase.html" %}
 
+{% block dropdown %}  
+    <li class="active">
+      <a href="/blog">Blog</a>
+    </li>
+{% endblock dropdown %}
+
+
 {% block slogan %}{% endblock slogan %}
+
 
 {% block content %}
 
@@ -13,7 +21,6 @@
 	  {{ post.body|safe }}
 	</div>
 	<br />
-
 	<div class="tags small">Catégories:
 	{% for tag in post.tags.all %}
 	  <a href="/blog/tag/{{tag}}"> <i class="fi-price-tag"></i> {{tag}} </a>
@@ -23,7 +30,7 @@
 	
 	<div class="post_meta small">
 	  <br />
-	  publié le: {{ post.created }}
+	  publié le: {{ post.created|date:"l d F Y" }}
 	</div>
       </div>
     </div>
@@ -32,3 +39,20 @@
 
 
 {% endblock %}
+
+{% block footer %}
+        <ul class="breadcrumbs footer bold">
+	<li><a href="/">Home</a></li>
+	{% for page in flatpages %}
+          <li><a href="{{ page.url }}">{{ page.title }}</a></li>
+	{% endfor %}
+	<li>
+	  <a href="/blog/">Blog</a>
+	</li>
+	<li class="current">
+	<a href="/">{{ post }}</a></li>
+      </li>
+
+	<li class="right">Réalisé avec Xpertise</li>
+      </ul>
+{% endblock footer %}

@@ -20,14 +20,16 @@
       <li><a href="/">Accueil</a></li>
       <li><a href="/réalisations/">Réalisations</a></li>
       <li><a href="/contact">Contact</a></li>
-      <li class="has-dropdown active">
-	<a href="/blog/">Blog</a>
-	<ul class="dropdown">
-	  {% for post in object_list %}<li>
-	    <a href="/blog/{{ post.id }}">{{ post }}</a></li>
-	  {% endfor %}
-	</ul>
-      </li>
+      {% block dropdown %}
+	<li class="has-dropdown active">
+	  <a href="/blog/">Blog</a>
+	  <ul class="dropdown">	  
+	    {% for post in object_list %}<li>
+	      <a href="/blog/{{ post.id }}">{{ post }}</a></li>
+	    {% endfor %}
+	  </ul>
+	{% endblock dropdown %}
+	</li>
     </ul>
 
     <!-- Left Nav Section -->
@@ -46,7 +48,8 @@
       </ul>
     </section>
   </nav>
-{% endblock menu%}
+{% endblock menu %}
+
 
 {% block base_body %}
   <div class="jumbotron masthead">
@@ -58,7 +61,21 @@
   {% block slogan %}
     <h2 class="text-center">Nos meilleurs ingrédients </h2>
     <h3 class="text-center">pour développer librement</h3>
-</div>
-{% endblock slogan %}
-<br />
-{% endblock base_body %}
+  {% endblock slogan %}
+    <br />
+  {% endblock base_body %}
+
+  {% block footer %}
+    <ul class="breadcrumbs footer bold">
+      <li><a href="/">Home</a></li>
+      {% for page in flatpages %}
+        <li><a href="{{ page.url }}">{{ page.title }}</a></li>
+      {% endfor %}
+      <li class="has-dropdown active">
+	<a href="/blog/">Blog</a>
+      </li>
+
+      <li class="right">Réalisé avec Xpertise</li>
+    </ul>
+
+  {% endblock footer %}
