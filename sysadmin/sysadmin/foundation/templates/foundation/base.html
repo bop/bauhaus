@@ -36,7 +36,7 @@
   </head>
   <body {% block body_attr %}{% endblock body_attr %}>
     {% block menu %}
-      <nav class="top-bar" data-topbar>
+      <nav class="top-bar" data-topbar data-interchange="[(landscape)]">
 	{% if user.is_authenticated %}
 	  <ul class="title-area">
 	    <li class="name">

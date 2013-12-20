@@ -40,19 +40,8 @@
 
 {% endblock %}
 
-{% block footer %}
-        <ul class="breadcrumbs footer bold">
-	<li><a href="/">Home</a></li>
-	<li>
-	  <a href="/blog/">Blog</a>
-	</li>
+{% block blog %}
 	<li class="current">
-	<a href="/">{{ post }}</a></li>
-      </li>	{% for page in flatpages %}
-          <li><a href="{{ page.url }}">{{ page.title }}</a></li>
-	{% endfor %}
-
-
-	<li class="right">Réalisé avec Xpertise</li>
-      </ul>
-{% endblock footer %}
+	<a href="/">{{ post.title }}</a>
+      </li>
+{% endblock blog %}

@@ -1608,7 +1608,8 @@ meta.foundation-mq-topbar {
     font-size: 1.125rem;
     font-weight: normal;
     margin-left: 20px; 
-    background: #333333; }
+    background: #333333; 
+}
     .top-bar-section ul li > a.button {
       background: #008cba;
       font-size: 0.8125rem;
@@ -1630,10 +1631,19 @@ meta.foundation-mq-topbar {
         background: #d32a0e; }
   .top-bar-section ul li:hover > a {
     background: #272727;
-    color: white; }
+    color: white;
+ }
   .top-bar-section ul li.active > a {
     background: #2E8B57;
-    color: white; }
+    color: white; 
+}
+
+.top-bar-section a {
+	  -webkit-transition: all .3s ease-in-out;
+	  -moz-transition: all .3s ease-in-out;
+          transition: all .3s ease-in-out;
+
+}
     .top-bar-section ul li.active > a:hover {
       background: #2E8B57;
       color: silver;
@@ -1641,7 +1651,8 @@ meta.foundation-mq-topbar {
   .top-bar-section .has-form {
     padding: 15px; }
   .top-bar-section .has-dropdown {
-    position: relative; }
+    position: relative;
+ }
     .top-bar-section .has-dropdown > a:after {
       content: "";
       display: block;
@@ -1686,7 +1697,8 @@ meta.foundation-mq-topbar {
         .top-bar-section .dropdown li.title h5 a {
           color: white;
           line-height: 22.5px;
-          display: block; }
+          display: block; 
+}
     .top-bar-section .dropdown label {
       padding: 8px 15px 2px;
       margin-bottom: 0;
@@ -5845,35 +5857,31 @@ table th[class*="span"],
 
 .table-hover tbody tr.info:hover td {
   background-color: #c4e3f3;
+}
 
 
-
-code,
-pre {
-  padding: 0 3px 2px;
+code, pre {
   font-family: Monaco, Menlo, Consolas, "Courier New", monospace;
-  font-size: 105%;
   color: #5FFB17;
   -webkit-border-radius: 3px;
      -moz-border-radius: 3px;
           border-radius: 3px;
 }
 
-code {
-  padding: 9.5px;
+code { 
+  padding: 5.5px;
   margin: 0 0 10px;
   display: inline-block;
-  color: #5FFB17;
-  white-space: nowrap;
-  background-color: #333;
+  background-color: #444;
   -webkit-border-radius: 3px;
   -moz-border-radius: 3px;
   border-radius: 3px;
-
+  font-size: 14px;
+  font-weight: 600;
 }
 
 pre {
-  width: 682px;
+  width: 582px;
   display: block;
   padding: 9.5px;
   margin: 0 0 10px;
@@ -5889,17 +5897,4 @@ pre {
   -webkit-border-radius: 4px;
      -moz-border-radius: 4px;
           border-radius: 4px;
-}
-
-pre.prettyprint {
-  margin-bottom: 20px;
-}
-
-pre code {
-  padding: 0;
-  color: #5FFB17;
-  white-space: pre;
-  white-space: pre-wrap;
-  background-color: transparent;
-  border: 0;
 }
