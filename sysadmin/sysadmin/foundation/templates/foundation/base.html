@@ -48,21 +48,21 @@
 	  <!-- Right Nav Section -->
 	  <ul class="left">
 	    {% if not flatpage.title %}
-              <li class="active"><a href="/">Accueil</a></li>
-	    {% else %}<li><a href="/">Accueil</a></li>
+              <li class="active"><a href="/"><i class="fi-home"></i> Accueil</a></li>
+	    {% else %}<li><a href="/"> <i class="fi-home"></i> Accueil</a></li>
 	  {% endif %}
 	  <li>
-	    <a href="/blog/">Le Blog</a>
+	    <a href="/blog/"> <i class="fi-asterisk"></i> Le Blog</a>
 	  </li>
 	  {% if flatpage.title = 'Réalisations' %}
-            <li class="active"><a href="/réalisations/">Réalisations</a></li>
+            <li class="active"><a href="/réalisations/"><i class="fi-wrench"></i> Réalisations</a></li>
 	  {% else %}
-	    <li><a href="/réalisations/">Réalisations</a></li>
+	    <li><a href="/réalisations/"><i class="fi-wrench"></i> Réalisations</a></li>
 	  {% endif %}
 	  {% if flatpage.title = 'Contact' %}
-            <li class="active"><a href="/contact">Contact</a></li>
+            <li class="active"><a href="/contact"> <i class="fi-mail"></i> Contact</a></li>
 	  {% else %}	    
-	    <li><a href="/contact">Contact</a></li>
+	    <li><a href="/contact"> <i class="fi-mail"></i> Contact</a></li>
 	  {% endif %}
 	  </ul>
 

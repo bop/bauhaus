@@ -19,10 +19,10 @@
   <section class="top-bar-section radius">
     <!-- Right Nav Section -->
     <ul class="left">
-      <li><a href="/">Accueil</a></li>
+      <li><a href="/"> <i class="fi-home"></i> Accueil</a></li>
       {% block dropdown %}
 	<li class="has-dropdown active">
-	  <a href="/blog/">Le Blog</a>
+	  <a href="/blog/"> <i class="fi-wrench"></i> Le Blog</a>
 	  <ul class="dropdown">	  
 	    {% for post in object_list %}<li>
 	      <a href="/blog/{{ post.id }}">{{ post }}</a></li>
@@ -31,9 +31,9 @@
 	    </li>
 	  </ul>
 	{% endblock dropdown %}
-      <li><a href="/réalisations/">Réalisations</a></li>
+      <li><a href="/réalisations/"> <i class="fi-asterisk"> </i> Réalisations</a></li>
 	</li>
-	<li><a href="/contact">Contact</a></li>
+	<li><a href="/contact"> <i class="fi-address-book"> </i> Contact</a></li>
     </ul>
 
     <!-- Left Nav Section -->
