@@ -12,7 +12,7 @@
 
     {% block meta %}{% endblock meta %}
     {% block base_title %}
-      <title>{% block title %}Xpertise{% endblock title %}</title>
+      <title>{% block title %}Xpertise - Accueil{% endblock title %}</title>
     {% endblock base_title %}
 
     {# Base Foundation CSS #}
@@ -52,7 +52,7 @@
 	    {% else %}<li><a href="/">Accueil</a></li>
 	  {% endif %}
 	  <li>
-	    <a href="/blog/">Blog</a>
+	    <a href="/blog/">Le Blog</a>
 	  </li>
 	  {% if flatpage.title = 'Réalisations' %}
             <li class="active"><a href="/réalisations/">Réalisations</a></li>
@@ -92,7 +92,7 @@
       {% block footer %}
       <ul class="breadcrumbs footer bold">
 	<li><a href="/">Home</a></li>
-	<li><a href="/blog">Blog</a></li>
+	<li><a href="/blog">Le Blog</a></li>
 	{% block blog %}{% endblock blog %}
 	<li class="right">Réalisé avec Xpertise</li>
 	{% for page in flatpages %}
