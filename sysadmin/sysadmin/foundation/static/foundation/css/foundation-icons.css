@@ -592,3 +592,13 @@
 .fi-yen:before { content: "\f218"; }
 .fi-zoom-in:before { content: "\f219"; }
 .fi-zoom-out:before { content: "\f21a"; }
+
+
+
+.big {
+    font-size: 250%
+}
+
+.large {
+    font-size: 120%
+}
