@@ -131,6 +131,7 @@ INSTALLED_APPS = (
     'django.contrib.flatpages',
     'taggit',
     'sysadmin.blog',
+    'django_extensions',
 )
 
 # A sample logging configuration. The only tangible logging
