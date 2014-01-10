@@ -163,4 +163,4 @@ LOGGING = {
 }
 
 
-SITE_NAME = 'sysadmin'
+SITE_NAME = 'sysadmin.bop'
