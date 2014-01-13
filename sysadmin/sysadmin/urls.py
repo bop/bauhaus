@@ -9,6 +9,7 @@ urlpatterns = patterns('',
     # url(r'^$', 'sysadmin.views.home', name='home'),
     # url(r'^sysadmin/', include('sysadmin.foo.urls')),
                        url(r'^$', include('sysadmin.foundation.urls')),
+                       url(r'^index.html/$', include('sysadmin.foundation.urls')),
                        url(r'^blog/', include('sysadmin.blog.urls')),
 
                        url(r'^admin/', include(admin.site.urls)),
