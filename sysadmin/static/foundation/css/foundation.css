@@ -5548,6 +5548,7 @@ only screen and (     -o-min-device-pixel-ratio: 2/1) {
 }
 
 .footer {
+  z-index: 1;
   font-family:  'Varela Round', sans-serif;   
   width: 80%;
   margin-left: 10%;
