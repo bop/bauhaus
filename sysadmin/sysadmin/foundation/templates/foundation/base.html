@@ -10,6 +10,8 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="/static/foundation/css/character.scss" type="text/css" media="screen" />
+    <script src="/static/foundation/js/foundation/foundation.topbar.js"></script>
+    <script src="/static/foundation/js/foundation.min.js"></script>
     {% block meta %}{% endblock meta %}
     {% block base_title %}
       <title>{% block title %}Xpertise - Accueil{% endblock title %}</title>
@@ -44,64 +46,59 @@
 	      <h1><a href="/admin"><b>Xpertise</b></a></h1>
 	    </li>
 	  </ul>
+	{% else %}
+	  <ul class="title-area">
+	    <li class="name"><!-- Leave this empty --></li>
+	  </ul>
 	{% endif %}
 	<section class="top-bar-section radius">
-	  <!-- Right Nav Section -->
-	  <ul class="left">
+	  <!-- Left Nav Section -->
+	  <ul>
 	    {% if not flatpage.title %}
-              <li class="active"><a href="/"><i class="fi-home"></i> Accueil</a></li>
+	      <li class="active"><a href="/"><i class="fi-home"></i> Accueil</a></li>
 	    {% else %}<li><a href="/"> <i class="fi-home"></i> Accueil</a></li>
 	  {% endif %}
+	  <li class="divider"></li>
 	  <li>
-	    <a href="/blog/"> <i class="fi-asterisk"></i> Le Blog</a>
+	    <a href="/blog/"> <i class="fi-megaphone"></i> Le Blog</a>
 	  </li>
-	  {% if flatpage.title = 'Réalisations' %}
-            <li class="active"><a href="/réalisations/"><i class="fi-wrench"></i> Réalisations</a></li>
+	  <li class="divider"></li>
+	  {% if flatpage.title = 'Exemples' %}
+	    <li class="active"><a href="/réalisations/"><i class="fi-wrench"></i> Exemples</a></li>
 	  {% else %}
-	    <li><a href="/réalisations/"><i class="fi-wrench"></i> Réalisations</a></li>
+	    <li><a href="/réalisations/"><i class="fi-wrench"></i> Exemples</a></li>
 	  {% endif %}
+	  <li class="divider"></li>
 	  {% if flatpage.title = 'Contact' %}
-            <li class="active"><a href="/contact"> <i class="fi-mail"></i> Contact</a></li>
+	    <li class="active"><a href="/contact"> <i class="fi-mail"></i> Contact</a></li>
 	  {% else %}	    
 	    <li><a href="/contact"> <i class="fi-mail"></i> Contact</a></li>
 	  {% endif %}
 	  </ul>
 
-	  <!-- Left Nav Section -->
-	  <ul class="right">
-	    <li><a href="#">Staff</a></li>
-	    <li class="has-form">
-	      <div class="row collapse">
-		<div class="large-8 small-9 columns">
-		  <input type="text" placeholder="Trouver un truc">
-		  </div>
-		  <div class="small-3 columns">
-		    <a href="#" class="button expand round btn-custom">Cherche</a>
-		  </div>
-		</div>
-	      </li>
-	    </ul>
-	  </section>
-	</nav>
-      {% endblock menu%}
+	  
+
+	</section>
+      </nav>
+    {% endblock menu%}
 
       {# Main content goes here #}
       {% block base_body %}{% endblock base_body %}
 
       {% block content %}{% endblock content %}
-      
+
       {% block footer %}
-      <ul class="breadcrumbs footer bold">
-	<li><a href="/">Home</a></li>
-	<li><a href="/blog">Le Blog</a></li>
-	{% block blog %}{% endblock blog %}
-	<li class="right">Réalisé avec Xpertise</li>
-	{% for page in flatpages %}
-          <li><a href="{{ page.url }}">{{ page.title }}</a></li>
-	{% endfor %}
-      </ul>
+	<ul class="breadcrumbs footer">
+	  <li><a href="/">Home</a></li>
+	  <li><a href="/blog">Le Blog</a></li>
+	  {% block blog %}{% endblock blog %}
+	  <li class="right">Réalisé avec Xpertise</li>
+	  {% for page in flatpages %}
+	    <li><a href="{{ page.url }}">{{ page.title }}</a></li>
+	  {% endfor %}
+	</ul>
       {% endblock footer %}
-      
+
       {# Override if you need another version of jQuery #}
       {% block foundation_jquery %}
 	{% foundation_vendor "jquery" %}
@@ -118,8 +115,8 @@
       {# Init Foundation #}
       {% block foundation_js_init %}
 	<script>
-	  $(document).foundation();
+	  $(document).foundation({tab: {toggleable: true}});
 	</script>
       {% endblock foundation_js_init %}
-    </body>
-  </html>
+  </body>
+</html>

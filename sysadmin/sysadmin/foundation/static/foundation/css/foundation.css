@@ -1472,6 +1472,11 @@ meta.foundation-mq-topbar {
       z-index: 98;
       margin-top: 45px; }
 
+
+.topbar-bg {
+    background-color: #111;
+}
+
 .top-bar {
   overflow: hidden;
   height: 45px;
@@ -1596,20 +1601,21 @@ meta.foundation-mq-topbar {
   .top-bar-section [role="separator"] {
     border-top: solid 1px #1a1a1a;
     clear: both;
-    height: 1px;
+    height: 10px;
     width: 100%; }
   .top-bar-section ul li > a {
     display: block;
     width: 100%;
     color: silver;
     padding: 12px 0 12px 0;
-    padding-left: 5px;
+    padding-left: 2px;
     font-family: "Helvetica Neue", "Helvetica", Helvetica, Arial, sans-serif;
     font-size: 1.125rem;
     font-weight: normal;
-    margin-left: 20px; 
+    margin-left: 0px; 
     background: #333333; 
 }
+
     .top-bar-section ul li > a.button {
       background: #008cba;
       font-size: 0.8125rem;
@@ -1750,8 +1756,6 @@ meta.foundation-mq-topbar {
       display: inline; }
       .top-bar-section ul li {
         float: left; }
-        .top-bar-section ul li .js-generated {
-          display: none; }
     .top-bar-section li.hover > a:not(.button) {
       background: #272727;
       color: white; }
@@ -6026,4 +6030,9 @@ pre {
 
 .highlight {
    color: #7E587E;
+}
+
+
+  .top-bar-section ul li:first-child {
+      margin-left: 250px
 }
