@@ -1,5 +1,5 @@
 
-.character {
+.avatar {
   width: calc-width($size);
   height: calc-height($size);
   margin: -180px 0 0 97%;
@@ -9,7 +9,7 @@
   z-index: -1;
 }
 
-.character:after {
+.avatar:after {
   content: "";
   position: absolute;
   top: 0;
