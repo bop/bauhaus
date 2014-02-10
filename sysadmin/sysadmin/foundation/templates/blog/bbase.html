@@ -27,8 +27,8 @@
       <li class="divider"></li>
       {% block dropdown %}
 	<li class="active">
-	  <a href="/blog/" data-dropdown="drop"> <i class="fi-megaphone"></i> Le Blog  &raquo;</a>
-	  <ul id="drop" class="f-dropdown"  data-dropdown-content>
+	  <a href="/blog/" data-dropdown="drop" data-options="is_hover:true"> <i class="fi-megaphone"></i> Le Blog  &raquo;</a>
+	  <ul id="drop" class="f-dropdown"  data-dropdown-content >
 	    {% for post in object_list %}<li>
 	      <a href="/blog/{{ post.id }}">{{ post }}</a></li><br />
 	    {% endfor %}
