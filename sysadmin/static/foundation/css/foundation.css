@@ -5552,6 +5552,7 @@ only screen and (     -o-min-device-pixel-ratio: 2/1) {
 }
 
 .footer {
+  font-weight: normal;
   z-index: 1;
   font-family:  'Varela Round', sans-serif;   
   width: 80%;
@@ -6033,6 +6034,6 @@ pre {
 }
 
 
-  .top-bar-section ul li > a:first-child {
-      margin-left: 30px
+  .top-bar-section ul li:first-child {
+      margin-left: 250px
 }

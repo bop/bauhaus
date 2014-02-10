@@ -9,8 +9,8 @@
     settings : {
       index : 0,
       sticky_class : 'sticky',
-      custom_back_text: true,
-      back_text: 'Back',
+      custom_back_text: false,
+      back_text: '',
       is_hover: true,
       mobile_show_parent_link: false,
       scrolltop : true // jump to top when sticky nav menu toggle is clicked

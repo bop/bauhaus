@@ -1,4 +1,4 @@
-#!/home/bossip/.virtualenvs/bauHaus/bin/python
+#!/home/bop/.virtualenvs/bauhaus/bin/python
 # EASY-INSTALL-ENTRY-SCRIPT: 'pip==1.1','console_scripts','pip'
 __requires__ = 'pip==1.1'
 import sys

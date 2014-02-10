@@ -9,7 +9,6 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="/static/foundation/css/character.scss" type="text/css" media="screen" />
     <script src="/static/foundation/js/foundation/foundation.topbar.js"></script>
     <script src="/static/foundation/js/foundation.min.js"></script>
     {% block meta %}{% endblock meta %}
@@ -63,7 +62,7 @@
 	    <a href="/blog/"> <i class="fi-megaphone"></i> Le Blog</a>
 	  </li>
 	  <li class="divider"></li>
-	  {% if flatpage.title = 'Exemples' %}
+	  {% if flatpage.title = 'Réalisations' %}
 	    <li class="active"><a href="/réalisations/"><i class="fi-wrench"></i> Exemples</a></li>
 	  {% else %}
 	    <li><a href="/réalisations/"><i class="fi-wrench"></i> Exemples</a></li>
