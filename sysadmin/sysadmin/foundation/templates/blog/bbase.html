@@ -25,8 +25,17 @@
     <ul class="left">
       <li><a href="/"> <i class="fi-home"></i> Accueil</a></li>
       <li class="divider"></li>
+      {% block dropdown %}
 	<li class="active">
-	  <a href="/blog/"> <i class="fi-megaphone"></i> Le Blog</a>
+	  <a href="/blog/" data-dropdown="drop"> <i class="fi-megaphone"></i> Le Blog  &raquo;</a>
+	  <ul id="drop" class="f-dropdown"  data-dropdown-content>
+	    {% for post in object_list %}<li>
+	      <a href="/blog/{{ post.id }}">{{ post }}</a></li><br />
+	    {% endfor %}
+	    <li><a href="/blog/archives">archives</a>
+	    </li>
+	  </ul>
+	{% endblock dropdown %}
       <li><a href="/réalisations/"> <i class="fi-wrench"> </i> Exemples</a></li>
 	</li>
 	<li class="divider"></li>
