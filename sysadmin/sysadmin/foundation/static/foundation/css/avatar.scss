@@ -1,12 +1,11 @@
-
 .avatar {
   width: calc-width($size);
   height: calc-height($size);
-  margin: -180px 0 0 97%;
+  margin: -150px 0 0 95%;
   position: relative;
   font-size: $size; 
   background-color: #333;
-  z-index: -1;
+  z-index: 1;
 }
 
 .avatar:after {

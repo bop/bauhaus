@@ -19,21 +19,10 @@
 
       {{ flatpage.content }}
 
-    <div class="row">
-      <div class="large-12 columns">
-	
-	  
-	  <!-- Mobile Header -->
+      <div class="row">
+	<div class="large-12 columns">
 	  
 	  
-	  <div class="row">
-	    <div class="small-12 show-for-small"><br>
-	      <img src="http://placehold.it/1000x600&text=For Small Screens" />
-	    </div>
-	  </div>
-	  
-	  
-	  <!-- End Mobile Header -->
 	  
 	</div>
 	</div><br>
@@ -65,13 +54,15 @@
 		      </h5>
 		      
 		      <div class="show-for-small" align="center">
-			<a href="#" class="small radius button">email</a><br>
-			
+			<a href="#" class="small radius button" data-dropdown="drup">email  &raquo;</a>
+			<ul class="content f-dropdown" id="drup" data-dropdown-content>
+			  <li>info@xpertise.ch</li>
+			</ul>
 			<a href="#" class="small radius button">skype</a>
 		      </div>
 		      
 		    </div>
-		    <div class="large-6 small-6 columns">
+		    <div class="large-6 columns hide-for-small">
 		      
 		      <p>Suspendisse ultrices ornare tempor. Aenean eget ultricies libero. Phasellus non ipsum eros. Vivamus at dignissim massa. Aenean dolor libero, blandit quis interdum et, malesuada nec ligula. Nullam erat erat, eleifend sed pulvinar ac. Suspendisse ultrices ornare tempor. Aenean eget ultricies libero.
 		      </p>
@@ -85,12 +76,13 @@
 		
 		<h4>Get In Touch!</h4><hr/>
 		
-		<a class="large button expand" href="#">
-		  email
-		</a>
-		
-		<a class="large button expand" href="#">
-		  skype
+		<a href="#" class="large button" data-dropdown="drip">email  &raquo;</a>
+		<ul class="content f-dropdown" id="drip" data-dropdown-content>
+		  <li>info@xpertise.ch</li>
+		</ul>
+		<br />
+		<a class="large button" href="#">
+		  &nbsp; skype
 		</a>
 		
 		
@@ -102,9 +94,23 @@
 	  </div>
 	</div>
       </div>
-
+      <!-- Mobile Header -->
+      
+      <br /><br /><br /> <br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br />
+      <div class="row">
+	<div class="small-6 show-for-small"><br>
+	  <div class="avatar"></div>
+	</div>
+	<div class="small-12 show-for-small"><br>
+	  <img src="http://placehold.it/1000x600&text=For Small Screens" />
+	</div>
+      </div>
+      
+      
+      <!-- End Mobile Header -->
+      <br /><br />
     </div>
   </div>
-	
+  
 
 {% endblock %}

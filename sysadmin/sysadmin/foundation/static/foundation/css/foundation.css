@@ -6028,5 +6028,9 @@ pre {
 
 
   .top-bar-section ul:first-child {
-      margin-left: 250px
+      margin-left: 150px
+}
+
+li .footer .breadcrumbs {
+    z-index: 5;
 }
