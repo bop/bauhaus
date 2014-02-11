@@ -8,7 +8,7 @@
 {% block title %}Le Blog {{ post.title }}{% endblock title %}
 
 {% block menu %}
-  <nav class="top-bar" data-topbar>
+  <nav class="top-bar" data-interchange="[(landscape)]">
     {% if user.is_authenticated %}
       <ul class="title-area">
 	<li class="name">
@@ -18,6 +18,7 @@
     {% else %}
       <ul class="title-area">
 	<li class="name"><!-- Leave this empty --></li>
+	<li class="toggle-topbar menu-icon"><a href="#"><span>Menu </span></a></li>
       </ul>
   {% endif %}
   <section class="top-bar-section radius">
@@ -27,7 +28,7 @@
       <li class="divider"></li>
       {% block dropdown %}
 	<li class="active">
-	  <a href="/blog/" data-dropdown="drop" data-options="is_hover:true"> <i class="fi-megaphone"></i> Le Blog  &raquo;</a>
+	  <a href="/blog/" data-dropdown="drop" data-options="is_hover:true"> <i class="fi-lightbulb"></i> Le Blog  &raquo;</a>
 	  <ul id="drop" class="f-dropdown"  data-dropdown-content >
 	    {% for post in object_list %}<li>
 	      <a href="/blog/{{ post.id }}">{{ post }}</a></li><br />
@@ -36,7 +37,7 @@
 	    </li>
 	  </ul>
 	{% endblock dropdown %}
-      <li><a href="/réalisations/"> <i class="fi-wrench"> </i> Exemples</a></li>
+      <li><a href="/réalisations/"> <i class="fi-wrench"> </i> Réalisations</a></li>
 	</li>
 	<li class="divider"></li>
 	<li><a href="/contact"> <i class="fi-address-book"> </i> Contact</a></li>

@@ -1472,7 +1472,7 @@ meta.foundation-mq-topbar {
       z-index: 99; }
     .fixed.expanded:not(.top-bar) .top-bar-section {
       z-index: 98;
-      margin-top: 48px; }
+      margin-top: 45px; }
 
 
 .topbar-bg {
@@ -1481,7 +1481,7 @@ meta.foundation-mq-topbar {
 
 .top-bar {
   overflow: hidden;
-  height: 48px;
+  height: 45px;
   line-height: 48px;
   position: relative;
   background: #333333;
@@ -1501,7 +1501,7 @@ meta.foundation-mq-topbar {
     padding-bottom: .35rem;
     font-size: 0.75rem; }
   .top-bar .button {
-    padding-top: .48rem;
+    padding-top: .45rem;
     padding-bottom: .35rem;
     margin-bottom: 0;
     font-size: 0.75rem; }
@@ -1640,12 +1640,12 @@ meta.foundation-mq-topbar {
   .top-bar-section ul li:hover > a {
     background: #272727;
     color: white;
-    border-bottom: solid 3px #899097;
  }
   .top-bar-section ul li.active > a {
     background: #2E8B57;
     color: white; 
     border-bottom: solid 3px #899097;
+    margin-bottom: -3px
 }
 
 .top-bar-section a {
@@ -2695,7 +2695,7 @@ a.th {
   .orbit-container .orbit-prev,
   .orbit-container .orbit-next {
     position: absolute;
-    top: 45%;
+    top: 48%;
     margin-top: -25px;
     width: 36px;
     height: 60px;
