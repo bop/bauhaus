@@ -5930,7 +5930,7 @@ pre {
   background-image: -o-linear-gradient(top, #cca06a, #5e4220);
   background-image: linear-gradient(#cca06a, #5e4220);
   border-color: #5e4220 #5e4220 hsl(33, 49%, 16%);
-  color: #FFF !important;
+  color: #FFFAF0 !important;
   text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.59);
   -webkit-font-smoothing: antialiased;
 }
