@@ -39,14 +39,14 @@
     {% block menu %}
       <nav class="top-bar" data-interchange="[(landscape)]">
 	{% if user.is_authenticated %}
-	  <ul class="title-area">
+	  <ul class="right title-area">
 	    <li class="name">
 	      <h1><a href="/admin"><b>Xpertise</b></a></h1>
 	    </li>
 	    <li class="toggle-topbar menu-icon"><a href="#"><span>Menu </span></a></li>
 	  </ul>
 	{% else %}
-	  <ul class="left title-area">
+	  <ul class="right title-area">
 	    <li class="name"><!-- Leave this empty --></li>
 	    <li class="toggle-topbar menu-icon"><a href="#"><span>Menu </span></a></li>
 	  </ul>
@@ -74,10 +74,7 @@
 	  {% else %}	    
 	    <li><a href="/contact"> <i class="fi-mail"></i> Contact</a></li>
 	  {% endif %}
-	  </ul>
-
-	  
-
+	  </ul>	  
 	</section>
       </nav>
     {% endblock menu%}

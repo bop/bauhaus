@@ -65,6 +65,30 @@ nav ul {
   -o-transform: translate3d(0,0,0);
   transform: translate3d(0,0,0);
 }
+nav li a {
+  color: #fff;
+  display: block;
+  padding: 0 5px 0 25px;
+  text-decoration: none;
+  line-height: 2.6em;
+  overflow: hidden;
+  border-bottom: 1px solid #2d333d;
+}
+nav ul li {
+  border-top: 1px solid #3c4451;
+}
+nav ul li:hover a{
+  cursor: pointer;
+  background: #FF6CFD;
+}
+nav ul ul li a {
+	color: #eee;
+	padding: 0 5px 0 45px;
+    margin: 0;
+} 
+nav ul ul li a:hover {
+	background: #90478A;
+}
 }
 
 .menu-toggle {display: none;}
@@ -124,9 +148,3 @@ nav ul ul ul {position: absolute; left: 100%; top:0;}
 }
 
 
-
-@media only (max-width: 48em){
-.tab-bar nav ul li a {
-    margin-left: -15px
-}
-}
