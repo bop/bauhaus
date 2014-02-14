@@ -1,32 +1,26 @@
 {% extends "blog/bbase.html" %}
 
 
-{% block slogan %}
-<div class="row 12">
+{% block slogan %}      {% endblock slogan %}
 
-  <div class="container">
-    <div class="marketing">      
-    <h2>Archives</h2>
+      {% block content %}
+
+  <div class="row">
+    <div class="large-12 columns">
+      <div class="blog">
+	<h2>Archives</h2>
+	{% for post in object_list %}
+	  <p>{{ post.created|date:"Y-m-d" }}: <a href="/blog/{{post.id}}">{{ post.title }}</a></p>  
+	{% endfor %}
+      </div>
+    </div>
   </div>
-</div>
-{% endblock slogan %}
-
-{% block content %}
-
-  
-  {% for post in object_list %}
-
-  <p>{{ post.created|date:"Y-m-d" }}: <a href="/blog/{{post.id}}">{{ post.title }}</a></p>
-  
-
-  {% endfor %}
-
-</div>
-
+<br />
+<br />
 {% endblock content %}
 
 {% block blog %}
-	<li class="current">
-	<a href="/">Archives</a>
-      </li>
+  <li class="current">
+    <a href="/">Archives</a>
+  </li>
 {% endblock blog %}

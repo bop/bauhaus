@@ -3,7 +3,6 @@
 {% load flatpages %}
 {% get_flatpages as flatpages %}
 
-
 <!doctype html>
 <html class="no-js" lang="fr">
   <head>
@@ -39,14 +38,14 @@
     {% block menu %}
       <nav class="top-bar marge" data-interchange="[(landscape)]">
 	{% if user.is_authenticated %}
-	  <ul class="right title-area">
+	  <ul class="left title-area">
 	    <li class="name">
 	      <h1><a href="/admin"><b>Xpertise</b></a></h1>
 	    </li>
 	    <li class="toggle-topbar menu-icon"><a href="#"><span>Menu </span></a></li>
 	  </ul>
 	{% else %}
-	  <ul class="right title-area">
+	  <ul class="left title-area">
 	    <li class="name"><!-- Leave this empty --></li>
 	    <li class="toggle-topbar menu-icon"><a href="#"><span>Menu </span></a></li>
 	  </ul>

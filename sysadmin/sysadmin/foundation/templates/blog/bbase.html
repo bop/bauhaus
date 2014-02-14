@@ -8,7 +8,7 @@
 {% block title %}Le Blog {{ post.title }}{% endblock title %}
 
 {% block menu %}
-  <nav class="top-bar" data-interchange="[(landscape)]">
+  <nav class="top-bar marge" data-interchange="[(landscape)]">
     {% if user.is_authenticated %}
       <ul class="title-area">
 	<li class="name">
@@ -29,9 +29,12 @@
       {% block dropdown %}
 	<li class="active">
 	  <a href="/blog/" data-dropdown="drop" data-options="is_hover:true"> <i class="fi-lightbulb"></i> Le Blog  &raquo;</a>
-	  <ul id="drop" class="f-dropdown"  data-dropdown-content >
-	    {% for post in object_list %}<li>
-	      <a href="/blog/{{ post.id }}">{{ post }}</a></li><br />
+	  <ul id="drop" class="f-dropdown" data-dropdown-content>
+	    {% for post in object_list %}
+	      <li>
+		<a href="/blog/{{ post.id }}">{{ post }}</a>
+	      </li>
+	      <hr />
 	    {% endfor %}
 	    <li><a href="/blog/archives">archives</a>
 	    </li>

@@ -1597,11 +1597,12 @@ meta.foundation-mq-topbar {
   .top-bar-section ul {
     width: 100%;
     height: auto;
-    display: block;
+    display: inline;
     z-index: 999;
     background: #333333;
     font-size: 16px;
     margin: 0; }
+
   .top-bar-section .divider,
   .top-bar-section [role="separator"] {
     border-top: solid 1px #1a1a1a;
@@ -4161,7 +4162,7 @@ ul.off-canvas-list {
   max-width: 270px; 
 }
   .f-dropdown > *:first-child {
-    margin-top: 0; }
+    margin-top: 10px; }
   .f-dropdown > *:last-child {
     margin-bottom: 0; }
   .f-dropdown:before {
@@ -4198,7 +4199,8 @@ ul.off-canvas-list {
     font-size: 0.875rem;
     cursor: pointer;
     line-height: 1.125rem;
-    margin: 0; }
+    margin: 0; 
+}
     .f-dropdown li:hover, .f-dropdown li:focus {
       background: #eeeeee; }
     .f-dropdown li a {
@@ -4220,9 +4222,9 @@ ul.off-canvas-list {
     z-index: 99;
     max-width: 200px; }
   .f-dropdown.content > *:first-child {
-      margin-top: 0; }
+      margin-top: 10px; }
   .f-dropdown.content > *:last-child {
-      margin-bottom: 0; }
+      margin-bottom: 10px; }
   .f-dropdown.tiny {
     max-width: 200px; }
   .f-dropdown.small {
@@ -6047,8 +6049,24 @@ li .footer .breadcrumbs {
 
 @media only screen and (max-width: 40.063em) {
 .marge {
-    margin-left: -65px;
+    margin-left: -70px;
     width: 105%
 
 }
+
+ul #drop{
+    margin-left: 35%
+}
+
+ul #drop li{
+    display: block;
+}
+
+  .f-dropdown {
+    padding: 0.5rem;
+}
+
+
+
+
 }
