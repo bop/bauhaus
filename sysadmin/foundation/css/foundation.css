@@ -1480,8 +1480,7 @@ meta.foundation-mq-topbar {
 }
 
 .top-bar {
-    z-index: 99;
-  overflow: hidden;
+  overflow-x: initial;
   height: 45px;
   line-height: 48px;
   position: relative;
@@ -1573,6 +1572,7 @@ meta.foundation-mq-topbar {
           display: block;
           width: 16px;
           height: 0;
+
           -webkit-box-shadow: 0 10px 0 1px white, 0 16px 0 1px white, 0 22px 0 1px white;
           box-shadow: 0 10px 0 1px white, 0 16px 0 1px white, 0 22px 0 1px white; }
   .top-bar.expanded {
@@ -1590,16 +1590,19 @@ meta.foundation-mq-topbar {
   left: 0;
   position: relative;
   width: auto;
+
   -webkit-transition: left 300ms ease-out;
   -moz-transition: left 300ms ease-out;
   transition: left 300ms ease-out; }
   .top-bar-section ul {
     width: 100%;
     height: auto;
-    display: block;
+    display: inline;
+    z-index: 999;
     background: #333333;
     font-size: 16px;
     margin: 0; }
+
   .top-bar-section .divider,
   .top-bar-section [role="separator"] {
     border-top: solid 1px #1a1a1a;
@@ -1610,8 +1613,6 @@ meta.foundation-mq-topbar {
     display: block;
     width: 100%;
     color: silver;
-    padding: 12px 0 12px 0;
-    padding-left: 2px;
     font-family: "Helvetica Neue", "Helvetica", Helvetica, Arial, sans-serif;
     font-size: 1.125rem;
     font-weight: normal;
@@ -1722,6 +1723,7 @@ meta.foundation-mq-topbar {
   display: block; }
 
 @media only screen and (min-width: 40.063em) {
+
   .top-bar {
     background: #333333;
     *zoom: 1;
@@ -1760,10 +1762,13 @@ meta.foundation-mq-topbar {
       height: auto !important;
       display: inline; }
       .top-bar-section ul li {
-        float: left; }
+        float: left; 
+}
+
     .top-bar-section li.hover > a:not(.button) {
       background: #272727;
     }
+
     .top-bar-section li a:not(.button) {
       padding: 0 15px;
       line-height: 45px;
@@ -3988,7 +3993,8 @@ nav.tab-bar {
   color: white;
   height: 2.8125rem;
   line-height: 2.8125rem;
-  position: relative; }
+  position: relative; 
+}
   nav.tab-bar h1, nav.tab-bar h2, nav.tab-bar h3, nav.tab-bar h4, nav.tab-bar h5, nav.tab-bar h6 {
     color: white;
     font-weight: bold;
@@ -4156,7 +4162,7 @@ ul.off-canvas-list {
   max-width: 270px; 
 }
   .f-dropdown > *:first-child {
-    margin-top: 0; }
+    margin-top: 10px; }
   .f-dropdown > *:last-child {
     margin-bottom: 0; }
   .f-dropdown:before {
@@ -4193,7 +4199,8 @@ ul.off-canvas-list {
     font-size: 0.875rem;
     cursor: pointer;
     line-height: 1.125rem;
-    margin: 0; }
+    margin: 0; 
+}
     .f-dropdown li:hover, .f-dropdown li:focus {
       background: #eeeeee; }
     .f-dropdown li a {
@@ -4215,9 +4222,9 @@ ul.off-canvas-list {
     z-index: 99;
     max-width: 200px; }
   .f-dropdown.content > *:first-child {
-      margin-top: 0; }
+      margin-top: 10px; }
   .f-dropdown.content > *:last-child {
-      margin-bottom: 0; }
+      margin-bottom: 10px; }
   .f-dropdown.tiny {
     max-width: 200px; }
   .f-dropdown.small {
@@ -6036,4 +6043,28 @@ pre {
 
 li .footer .breadcrumbs {
     z-index: 5;
+}
+
+
+
+@media only screen and (max-width: 40.063em) {
+.marge {
+    margin-left: -70px;
+    width: 105%
+
+}
+
+ul #drop{
+    margin-left: 35%
+}
+
+ul #drop li{
+    display: block;
+}
+
+  .f-dropdown {
+    padding: 0.5rem;
+}
+
+
 }

@@ -6,8 +6,9 @@
 <!doctype html>
 <html class="no-js" lang="fr">
   <head>
-    <meta charset="utf-8" />
     <link rel="stylesheet" href="/static/foundation/css/foundation-menu.css" type="text/css" media="screen" />
+    <link rel="icon" type="image/x-icon" href="http://localhost:8000/static/favicon.png">
+    <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     {% block meta %}{% endblock meta %}
     {% block base_title %}
@@ -37,19 +38,6 @@
   <body {% block body_attr %}{% endblock body_attr %}>
     {% block menu %}
       <nav class="top-bar marge" data-interchange="[(landscape)]">
-	{% if user.is_authenticated %}
-	  <ul class="left title-area">
-	    <li class="name">
-	      <h1><a href="/admin"><b>Xpertise</b></a></h1>
-	    </li>
-	    <li class="toggle-topbar menu-icon"><a href="#"><span>Menu </span></a></li>
-	  </ul>
-	{% else %}
-	  <ul class="left title-area">
-	    <li class="name"><!-- Leave this empty --></li>
-	    <li class="toggle-topbar menu-icon"><a href="#"><span>Menu </span></a></li>
-	  </ul>
-	{% endif %}
 	<section class="top-bar-section radius">
 	  <!-- Left Nav Section -->
 	  <ul class="left">

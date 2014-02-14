@@ -9,18 +9,6 @@
 
 {% block menu %}
   <nav class="top-bar marge" data-interchange="[(landscape)]">
-    {% if user.is_authenticated %}
-      <ul class="title-area">
-	<li class="name">
-	  <h1><a href="/admin"><b>Xpertise</b></a></h1>
-	</li>
-      </ul>
-    {% else %}
-      <ul class="title-area left">
-	<li class="name"><!-- Leave this empty --></li>
-	<li class="toggle-topbar menu-icon"><a href="#"><span>Menu </span></a></li>
-      </ul>
-  {% endif %}
   <section class="top-bar-section radius">
     <!-- Right Nav Section -->
     <ul class="left">
