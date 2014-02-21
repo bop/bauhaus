@@ -5948,13 +5948,14 @@ pre {
 #wrapper {
     margin: 25px auto 0px 50px; 
     width: 400px;
+
 }
 
 #wrapper2 {
     margin: 25px auto 0px auto; 
-
     font-weight: normal;
     z-index: 0;
+
 }
 
 .ruban {
@@ -5965,21 +5966,23 @@ pre {
     border-radius: 10px;
     box-shadow: 0px 0px 8px rgba(0,0,0,0.3);
     z-index: 90;     
+
+
 }
 
 
 .btop {
-    border-top: 1px dashed #CDC1C5;
+    border-top: 1px dashed #A68064;
 }
 
 
 .bbot {
-    border-bottom: 1px dashed #CDC1C5;
+    border-bottom: 1px dashed #A68064;
 }
 
 
 .rectangle {
-    background: #6d6e72;
+    background: #333;
     height: 50px;
     width: 480px;
     position: relative;
@@ -5988,6 +5991,8 @@ pre {
     float: left;
     box-shadow: 0px 0px 4px rgba(0,0,0,0.55);
     z-index: 100; 
+    -webkit-border-radius: 2px;
+    border-radius: 2px;
 }
 
 
@@ -5996,7 +6001,7 @@ pre {
     font-size: 30px;
     font-variant: small-caps;
     font-weight: 500;
-    color: #CDC1C5;
+    color: #A68064;
     padding-bottom: 6px;
     text-shadow: 1px 1px 2px rgba(0,0,0,0.2);
     text-align: center;
@@ -6033,7 +6038,7 @@ pre {
 
 
 .highlight {
-   color: #7E587E;
+   color: #A68064;
 }
 
 

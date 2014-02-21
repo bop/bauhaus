@@ -127,6 +127,8 @@ INSTALLED_APPS = (
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'sysadmin.foundation',
+    #'django_admin_bootstrapped.bootstrap3',
+    'django_admin_bootstrapped',
     'django.contrib.admin',
     'django.contrib.flatpages',
     'taggit',
@@ -164,4 +166,4 @@ LOGGING = {
 }
 
 
-SITE_NAME = 'sysadmin.bop'
+SITE_NAME = 'djazz.home'
