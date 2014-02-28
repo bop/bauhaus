@@ -5,10 +5,13 @@
 
 {% block content %}
 
-  <div class="jumbotron masthead">
+  <div class="jumbotron masthead hide-for-small">
     <div class="container">
       <h1>{{ flatpage.title }}</h1>
     </div>
+  </div>
+  <div class="container show-for-small jumbotron2">
+    <h1>{{ flatpage.title }}</h1>
   </div>
   <br /><br />
   <div class="row">

@@ -5418,6 +5418,13 @@ th.hide-for-touch {
 }
 
 
+.jumbotron2 h1{
+	text-align: center;
+	font-size: 60px;
+	color: #E3E3E3;
+}
+
+
 .jumbotron li{
     display: inline-block;
     list-style-position: inside;
@@ -5440,7 +5447,7 @@ th.hide-for-touch {
 
 /* Base class
 ------------------------- */
-.jumbotron {
+.jumbotron,  .jumbotron2{
   font-family:  'Varela Round', sans-serif;
   position: relative;
   padding: 40px 0;

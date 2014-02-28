@@ -7,17 +7,19 @@
 
 {% block content %}
 
-  <div class="jumbotron masthead">
+  <div class="jumbotron masthead hide-for-small">
     <div class="container">
       <h1>{{ flatpage.title }}</h1>
-    </div>
+    </div> 
   </div>
+  <div class="container show-for-small jumbotron">
+    <h1>{{ flatpage.title }}</h1>
+  </div> 
   <br /><br />
 
   <div class="row">
     <div class="large-12 columns">
 
-      {{ flatpage.content }}
       <div class="row">
 	<div class="large-12 columns">
 	  <div class="row">  
@@ -53,20 +55,13 @@
 	    </div>	      
 	    <!-- End Content -->
 	  </div>
+      {{ flatpage.content }}
 	</div>
       </div>
     </div>
-    <!-- Mobile avatar -->
-    <br /><br />
-    <div class="row">
-      <div class="small-7 show-for-small"><br>
-	<div class="avatar"></div>
-      </div>
-    </div>   
-    <!-- End Mobile avatar -->
-    <br /><br />
+
 </div>
-<br /><br />
+
 
 
 {% endblock %}
