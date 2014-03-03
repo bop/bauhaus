@@ -5929,6 +5929,7 @@ pre {
   background-image: linear-gradient(#A68064, #5e4220);
   border-color: #A68064 #5e4220 hsl(33, 49%, 16%);
   color: #EDEDED !important;
+  font-size: 18px;
   text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.59);
   -webkit-font-smoothing: antialiased;
 }
@@ -6079,4 +6080,9 @@ ul #drop li{
 }
 
 
+}
+
+
+.values {
+    padding-left: 10%
 }

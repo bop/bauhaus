@@ -24,15 +24,6 @@
     {% block css %}
       {% foundation_css 'foundation-icons' %}
     {% endblock css %}
-
-    {# Override if you need another version of modernizr #}
-    {% block foundation_modernizer %}
-      {% foundation_vendor "custom.modernizr" %}
-    {% endblock foundation_modernizer %}
-
-    {# Custom head JS #}
-    {% block head_js %}{% endblock head_js %}
-
   </head>
   <body {% block body_attr %}{% endblock body_attr %}>
     {% block menu %}
