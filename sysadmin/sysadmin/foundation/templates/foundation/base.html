@@ -63,12 +63,11 @@
 
       {% block footer %}
 	<ul class="breadcrumbs footer">
-	  <li><a href="/">Home</a></li>
+	  <li><a href="/">Accueil</a></li>
 	  <li><a href="/blog">Le Blog</a></li>
 	  {% block blog %}{% endblock blog %}
-	  {% for page in flatpages %}
-	    <li><a href="{{ page.url }}">{{ page.title }}</a></li>
-	  {% endfor %}
+	  <li><a href="/réalisations/">Réalisations</a></li>
+	  <li><a href="/contact/">Contact</a></li>
 	</ul>
       {% endblock footer %}
 
