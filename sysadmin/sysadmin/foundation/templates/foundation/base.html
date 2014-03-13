@@ -6,9 +6,12 @@
 <!doctype html>
 <html class="no-js" lang="fr">
   <head>
-    <link rel="stylesheet" href="/static/foundation/css/foundation-menu.css" type="text/css" media="screen" />
     <link rel="icon" type="image/x-icon" href="http://djazz.home/static/favicon.ico">
     <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="description" content="">
+    <!-- Mobile viewport optimized: h5bp.com/viewport -->
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0" />
     {% block meta %}{% endblock meta %}
     {% block base_title %}
       <title>{% block title %}Xpertise - Accueil{% endblock title %}</title>
@@ -63,12 +66,11 @@
 
       {% block footer %}
 	<ul class="breadcrumbs footer">
-	  <li><a href="/">Home</a></li>
+	  <li><a href="/">Accueil</a></li>
 	  <li><a href="/blog">Le Blog</a></li>
 	  {% block blog %}{% endblock blog %}
-	  {% for page in flatpages %}
-	    <li><a href="{{ page.url }}">{{ page.title }}</a></li>
-	  {% endfor %}
+	  <li><a href="/réalisations/">Réalisations</a></li>
+	  <li><a href="/contact/">Contact</a></li>
 	</ul>
       {% endblock footer %}
 
