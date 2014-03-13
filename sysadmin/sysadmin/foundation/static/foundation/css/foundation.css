@@ -6171,7 +6171,7 @@ nav li a {
 #content {background: #f7fcff; }
 .full{padding:30px;margin: 0 auto 0 auto;max-width:62.5em;}
 .hero {padding: 100px 30px 30px 30px; background: #FF6CFD;}
-h1, h2, h3, h4, h5, a { font-family:"Source Sans Pro","Helvetica Neue","Helvetica",Helvetica,Arial,sans-serif;font-weight:400;font-style:normal; }
-html, body { width: 100%; height: 100%; padding:0; margin: 0; font-family:"Open Sans","Helvetica Neue","Helvetica",Helvetica,Arial,sans-serif;font-weight:normal;font-style:normal;line-height:1.5; font-size: 1.1em;}
+a { font-family:"Source Sans Pro","Helvetica Neue","Helvetica",Helvetica,Arial,sans-serif;font-weight:400;font-style:normal; }
+html, body { width: 100%; padding:0; margin: 0; font-family:"Open Sans","Helvetica Neue","Helvetica",Helvetica,Arial,sans-serif;font-weight:normal;font-style:normal;line-height:1.5;} 
 .hero h1{font-size: 5em; line-height: 0.0001em; letter-spacing: -0.07em;}
 .img{ display: block; width: 100%;}
